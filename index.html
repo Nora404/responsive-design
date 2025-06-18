@@ -8,6 +8,8 @@
   </head>
   <body>
     <div class="grid-container">
+      <!-- ----------- HEADER ----------- -->
+
       <div class="layout-header">
         <div class="header-grid">
           <div class="header-logo">logo</div>
@@ -16,6 +18,9 @@
           <div class="header-bottom"></div>
         </div>
       </div>
+
+      <!-- ----------- MENU ----------- -->
+
       <div class="layout-menu">
         <div id="desktop-menu">
           <button>Btn 1</button>
@@ -25,23 +30,25 @@
           <button>Btn 5</button>
         </div>
         <div id="mobile-menu">
-          <button onclick="toggleSlide('mobile-main-menu', 'left')">
-            menu
-          </button>
+          <button onclick="toggleSlide('mobile-main-menu', 'left')">menu</button>
           <button>home</button>
-          <button onclick="toggleSlide('mobile-main-sidebar', 'right')">
-            sidebars
-          </button>
+          <button onclick="toggleSlide('mobile-main-sidebar', 'right')">sidebars</button>
           <div id="mobile-main-menu" class="slide-panel">Test1</div>
           <div id="mobile-main-sidebar" class="slide-panel">Test2</div>
         </div>
       </div>
+
+      <!-- ----------- SIDEBAR LEFT ----------- -->
+
       <div class="layout-sidebar-left">
         <div class="sidebar-left">
           <div class="ad">left Ad 1</div>
           <div class="ad">left Ad 2</div>
         </div>
       </div>
+
+      <!-- ----------- MAIN CONTENT ----------- -->
+
       <div class="layout-main">
         <div id="desktop-main">
           <h3>Lorem ipsum.</h3>
@@ -148,15 +155,24 @@
           </p>
         </div>
       </div>
+
+      <!-- ----------- SIDEBAR RIGHT ----------- -->
+
       <div class="layout-sidebar-right">
         <div class="sidebar-right">
           <div class="ad">right Ad 1</div>
           <div class="ad">right Ad 2</div>
         </div>
       </div>
+
+      <!-- ----------- FOOTER ----------- -->
+
       <div class="layout-footer">footer</div>
     </div>
   </body>
+
+  <!-- ----------- MOBILE PANEL LOGIK ----------- -->
+
   <script>
     function toggleSlide(id, direction) {
       const el = document.getElementById(id);
@@ -174,7 +190,6 @@
       }
     }
 
-    // automatisch verstecken bei Fenster > 600px
     window.addEventListener("resize", () => {
       if (window.innerWidth > 600) {
         const el = document.getElementById("meinPanel");
@@ -185,7 +200,6 @@
       }
     });
 
-    // wenn Klick weder auf ein Panel noch auf einen Toggle-Button erfolgt
     document.addEventListener("click", function (e) {
       if (
         !e.target.closest(".slide-panel") &&
