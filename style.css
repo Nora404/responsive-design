@@ -111,6 +111,7 @@ body {
 .sticky {
   position: sticky;
   bottom: 0;
+  width: 100%;
 }
 
 button {
@@ -125,7 +126,8 @@ button {
 
 .ad {
   box-sizing: border-box;
-  width: 250px;
+  min-width: 100px;
+  max-width: 300px;
   height: 250px;
   background-color: #555;
   color: #ffffff;
