@@ -150,6 +150,16 @@ button {
       "main"
       "footer";
   }
+  .header-grid {
+    display: grid;
+    grid-template-areas:
+      "top top top"
+      "logo header header"
+      "bottom bottom bottom";
+    grid-template-columns: 80px auto;
+    grid-template-rows: 15px 60px 15px;
+    gap: 0.4rem;
+  }
 
   .layout-sidebar-left {
     display: none;
