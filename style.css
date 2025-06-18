@@ -163,6 +163,10 @@ button {
     display: none;
   }
 
+  .layout-main {
+    margin: 0 5px;
+  }
+
   #desktop-menu {
     display: none;
   }
