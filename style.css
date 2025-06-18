@@ -108,6 +108,10 @@ body {
 
 /* ----------- HELPER ----------- */
 
+#mobile-menu {
+  display: none;
+}
+
 .sticky {
   position: sticky;
   bottom: 0;
@@ -153,5 +157,14 @@ button {
 
   .layout-sidebar-right {
     display: none;
+  }
+
+  #desktop-menu {
+    display: none;
+  }
+  #mobile-menu {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
   }
 }
