@@ -184,5 +184,21 @@
         }
       }
     });
+
+    // wenn Klick weder auf ein Panel noch auf einen Toggle-Button erfolgt
+    document.addEventListener("click", function (e) {
+      if (
+        !e.target.closest(".slide-panel") &&
+        !e.target.matches('button[onclick*="toggleSlide"]')
+      ) {
+        ["mobile-main-menu", "mobile-main-sidebar"].forEach((id) => {
+          const panel = document.getElementById(id);
+          if (panel && panel.classList.contains("show")) {
+            panel.classList.remove("show", "slide-left", "slide-right");
+            panel.style.display = "none";
+          }
+        });
+      }
+    });
   </script>
 </html>
