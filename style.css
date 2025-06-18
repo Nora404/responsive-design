@@ -85,7 +85,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  /* align-items: end; */
 }
 
 .layout-sidebar-right {
@@ -96,7 +95,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  /* align-items: start; */
 }
 
 .layout-footer {
