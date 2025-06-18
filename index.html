@@ -1,149 +1,188 @@
-<head>
-  <meta charset="UTF-8" />
-  <title>Layout mit Grid</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-  <div class="grid-container">
-    <div class="layout-header">
-      <div class="header-grid">
-        <div class="header-logo">logo</div>
-        <div class="header-title">header</div>
-        <div class="header-top"></div>
-        <div class="header-bottom"></div>
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Layout mit Grid</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="layout-header">
+        <div class="header-grid">
+          <div class="header-logo">logo</div>
+          <div class="header-title">header</div>
+          <div class="header-top"></div>
+          <div class="header-bottom"></div>
+        </div>
       </div>
-    </div>
-    <div class="layout-menu">
-      <div id="desktop-menu">
-        <button>Btn 1</button>
-        <button>Btn 2</button>
-        <button>Btn 3</button>
-        <button>Btn 4</button>
-        <button>Btn 5</button>
+      <div class="layout-menu">
+        <div id="desktop-menu">
+          <button>Btn 1</button>
+          <button>Btn 2</button>
+          <button>Btn 3</button>
+          <button>Btn 4</button>
+          <button>Btn 5</button>
+        </div>
+        <div id="mobile-menu">
+          <button onclick="toggleSlide('mobile-main-menu', 'left')">
+            menu
+          </button>
+          <button>home</button>
+          <button onclick="toggleSlide('mobile-main-sidebar', 'right')">
+            sidebars
+          </button>
+          <div id="mobile-main-menu" class="slide-panel">Test1</div>
+          <div id="mobile-main-sidebar" class="slide-panel">Test2</div>
+        </div>
       </div>
-      <div id="mobile-menu">
-        <button>menu</button>
-        <button>home</button>
-        <button>sidebars</button>
+      <div class="layout-sidebar-left">
+        <div class="sticky">
+          <div class="ad">left Ad 1</div>
+          <div class="ad">left Ad 2</div>
+        </div>
       </div>
-    </div>
-    <div class="layout-sidebar-left">
-      <div class="sticky">
-        <div class="ad">left Ad 1</div>
-        <div class="ad">left Ad 2</div>
+      <div class="layout-main">
+        <div id="desktop-main">
+          <h3>Lorem ipsum.</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <h3>Lorem ipsum.</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <h3>Lorem ipsum.</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="layout-main">
-      <h3>Lorem ipsum.</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <h3>Lorem ipsum.</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <h3>Lorem ipsum.</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet.
-      </p>
-    </div>
-    <div class="layout-sidebar-right">
-      <div class="sticky">
-        <div class="ad">right Ad 1</div>
-        <div class="ad">right Ad 2</div>
+      <div class="layout-sidebar-right">
+        <div class="sticky">
+          <div class="ad">right Ad 1</div>
+          <div class="ad">right Ad 2</div>
+        </div>
       </div>
+      <div class="layout-footer">footer</div>
     </div>
-    <div class="layout-footer">footer</div>
-  </div>
-</body>
+  </body>
+  <script>
+    function toggleSlide(id, direction) {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const isVisible = el.classList.contains("show");
+
+      if (isVisible) {
+        el.classList.remove("show", "slide-left", "slide-right");
+        el.style.display = "none";
+      } else {
+        el.style.display = "block";
+        el.classList.add("show");
+        el.classList.add(direction === "left" ? "slide-left" : "slide-right");
+      }
+    }
+
+    // automatisch verstecken bei Fenster > 600px
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 600) {
+        const el = document.getElementById("meinPanel");
+        if (el) {
+          el.classList.remove("show", "slide-left", "slide-right");
+          el.style.display = "none";
+        }
+      }
+    });
+  </script>
+</html>

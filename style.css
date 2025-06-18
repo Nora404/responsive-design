@@ -171,8 +171,60 @@ button {
     display: none;
   }
   #mobile-menu {
+    position: relative;
     display: flex;
     justify-content: space-between;
     height: 100%;
+  }
+}
+
+/* ----------- MOBILE PANEL ----------- */
+
+.slide-panel {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: calc(100% - 5px);
+  height: max-content;
+  z-index: 50;
+  display: none;
+  background-color: #555;
+  border: 1px solid black;
+  padding: 5px;
+  color: #ffffff;
+}
+
+.slide-panel.show {
+  display: block;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.slide-left {
+  animation-name: slideFromLeft;
+}
+.slide-right {
+  animation-name: slideFromRight;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
