@@ -134,3 +134,24 @@ button {
   margin-bottom: 5px;
   padding: 5px;
 }
+
+/* ----------- MEDIA ----------- */
+
+@media screen and (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "menu"
+      "main"
+      "footer";
+  }
+
+  .layout-sidebar-left {
+    display: none;
+  }
+
+  .layout-sidebar-right {
+    display: none;
+  }
+}
